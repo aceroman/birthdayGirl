@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { images } from '../images';
+import { TypeAnimation } from 'react-type-animation';
 
 const CardCarousel = () => {
   const [active, setActive] = useState(3);
@@ -38,6 +39,17 @@ const CardCarousel = () => {
   return (
     <div className="min-h-screen overflow-x-hidden flex flex-col items-center justify-center bg-gradient-to-br from-purple-500 to-pink-400 px-4 font-mono">
       <h1 className="text-4xl md:text-5xl text-white text-center font-bold mb-8">🎉 Happy Birthday Mariela! 🎂</h1>
+      <TypeAnimation className='text-2xl text-white text-center font-semibold' 
+      sequence={['Independent', 1200,
+      'Reina', 1200,
+      'Beautiful', 1200, 
+      'Caring (sometimes)', 1200,
+      'Selfless', 1200,
+      'Thoughtful', 1200,
+      'Hardworker', 1200,
+      'Ambitious', 1200,
+      'Matcha Lover', 1200
+      ]} speed={50} repeat={Infinity}/>
 
       <div className="relative w-full max-w-7xl h-[500px] flex justify-center items-center overflow-visible">
         {images.map((img, index) => (

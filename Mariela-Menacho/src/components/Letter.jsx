@@ -40,16 +40,16 @@ const Letter = () => {
             open ? '-translate-y-[200px] opacity-100' : 'opacity-0'
           }`}
         >
-          <h1 className="text-xl text-pink-500 font-bold mb-2">Dear Friend,</h1>
+          <h1 className="text-xl text-pink-500 font-bold mb-2">Dear Mariela,</h1>
           <p className="text-sm mb-3 text-justify">
-            Today is a day I just had to write to you about. As another year goes by, I can't help but reflect on the beautiful moments that make you who you are.
-            From the laughs we’ve shared to the challenges you’ve overcome, everything has shaped you into the amazing person you are today.
+            You may not know it, but I do care about you a lot! Even when I was away for 4.5 years, and I was more vocal about missing Andres, Mom and Dad. I still missed you most of all. 
+            Never forget that I'm always here behind your back and we'll face some hardships, but we'll do it together. 
           </p>
           <p className="text-sm mb-3">
-            This little surprise is just a glimpse of memories and smiles we’ve collected. Click below to unwrap something special made just for you. 💜
+            One of your gifts is that I made you a website! I created this to showcase you to your friends can see it live! You can see some of the your past memories of them in by clicking the button below! 💜
           </p>
           <p className="text-sm mb-2">With love,</p>
-          <p className="italic text-sm">Your Biggest Fan</p>
+          <p className="italic text-sm">Your Older Brother,<br></br> Adrian Menacho</p>
 
           <button
             onClick={(e) => {

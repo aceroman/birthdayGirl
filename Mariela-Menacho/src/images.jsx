@@ -10,6 +10,15 @@ import Mari9 from '../src/assets/pic9.jpg'
 import Mari10 from '../src/assets/pic10.jpg'
 import Mari11 from '../src/assets/pic11.jpg'
 import Mari12 from '../src/assets/pic12.jpg'
+import Mari13 from '../src/assets/pic13.jpg'
+import Mari14 from '../src/assets/pic14.jpg'
+import Mari15 from '../src/assets/pic15.jpg'
+import Mari16 from '../src/assets/pic16.jpg'
+import Mari17 from '../src/assets/pic17.jpg'
+import Mari18 from '../src/assets/pic18.jpg'
+import Mari19 from '../src/assets/pic19.jpg'
+import Mari21 from '../src/assets/pic21.jpg'
+import Mari22 from '../src/assets/pic22.jpg'
+import Mari23 from '../src/assets/pic23.jpg'
 
-
-export const images = [Mari1, Mari2, Mari3, Mari4, Mari5, Mari6, Mari7, Mari8, Mari9, Mari10, Mari11, Mari12]
+export const images = [Mari1, Mari4, Mari3, Mari2, Mari5, Mari6, Mari7, Mari8, Mari9, Mari10, Mari11, Mari12, Mari13, Mari14, Mari15, Mari16, Mari17, Mari18, Mari19, Mari21, Mari22, Mari23]
