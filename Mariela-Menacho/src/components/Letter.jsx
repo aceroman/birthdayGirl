@@ -46,7 +46,7 @@ const Letter = () => {
             Never forget that I'm always here behind your back and we'll face some hardships, but we'll do it together. 
           </p>
           <p className="text-sm mb-3">
-            One of your gifts is that I made you a website! I created this to showcase you to your friends can see it live! You can see some of the your past memories of them in by clicking the button below! 💜
+            One of your gifts is that I made you a website! I created this to showcase you! That way all your friends can see their memories too! You can see some of those memories of them in by clicking the button below! 💜
           </p>
           <p className="text-sm mb-2">With love,</p>
           <p className="italic text-sm">Your Older Brother,<br></br> Adrian Menacho</p>
