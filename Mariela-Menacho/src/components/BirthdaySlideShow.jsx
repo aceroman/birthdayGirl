@@ -36,33 +36,70 @@ const CardCarousel = () => {
     loadShow();
   }, [active]);
 
-  return (
-    <div className="min-h-screen overflow-x-hidden flex flex-col items-center justify-center bg-gradient-to-br from-purple-500 to-pink-400 px-4 font-mono">
-      <h1 className="text-4xl md:text-5xl text-white text-center font-bold mb-8">🎉 Happy Birthday Mariela! 🎂</h1>
-      <TypeAnimation className='text-2xl text-white text-center font-semibold' 
-      sequence={['Independent', 1200,
-      'Reina', 1200,
-      'Beautiful', 1200, 
-      'Caring (sometimes)', 1200,
-      'Selfless', 1200,
-      'Thoughtful', 1200,
-      'Hardworker', 1200,
-      'Ambitious', 1200,
-      'Matcha Lover', 1200
-      ]} speed={50} repeat={Infinity}/>
+  // ✨ Sparkle Layer (Tailwind only)
+  const SparkleBackground = () => {
+    const sparkleCount = 50;
+    const colors = ['bg-white', 'bg-pink-200', 'bg-pink-400'];
+    const sizes = ['w-[10px] h-[10px]', 'w-[7px] h-[7px]', 'w-[5px] h-[5px]'];
+    const animations = [
+      'animate-[pulse_1s_linear_infinite]',
+      'animate-[pulse_1.1s_300ms_linear_infinite]',
+      'animate-[pulse_0.8s_600ms_linear_infinite]',
+      'animate-[pulse_1.3s_900ms_linear_infinite]',
+    ];
 
-      <div className="relative w-full max-w-7xl h-[500px] flex justify-center items-center overflow-visible">
+    const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
+    const getRandomPercent = () => `${Math.floor(Math.random() * 100)}%`;
+
+    return (
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {Array.from({ length: sparkleCount }).map((_, i) => (
+          <div
+            key={i}
+            className={`absolute rounded-full ${getRandom(colors)} ${getRandom(sizes)} ${getRandom(animations)}`}
+            style={{
+              top: getRandomPercent(),
+              left: getRandomPercent(),
+            }}
+          />
+        ))}
+      </div>
+    );
+  };
+
+  return (
+    <div className="relative min-h-screen overflow-x-hidden flex flex-col items-center justify-center bg-marielaPink px-4 font-mono">
+      <SparkleBackground />
+
+      <h1 className="text-4xl md:text-5xl text-white text-center font-bold mb-8">
+        🎉 Happy Birthday Mariela! 🎂
+      </h1>
+
+      <TypeAnimation
+        className="text-2xl text-white text-center font-semibold"
+        sequence={[
+          'Independent', 1200,
+          'Reina', 1200,
+          'Beautiful', 1200,
+          'Caring (sometimes)', 1200,
+          'Selfless', 1200,
+          'Thoughtful', 1200,
+          'Hardworker', 1200,
+          'Ambitious', 1200,
+          'Matcha Lover', 1200,
+        ]}
+        speed={50}
+        repeat={Infinity}
+      />
+
+      <div className="relative w-full max-w-7xl h-[500px] flex justify-center items-center overflow-visible z-10">
         {images.map((img, index) => (
           <div
             key={index}
             ref={(el) => (itemsRef.current[index] = el)}
             className="absolute w-[280px] h-[400px] md:w-[350px] md:h-[500px] rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out overflow-hidden border-4 border-white bg-white"
           >
-            <img
-              src={img}
-              alt={`slide-${index}`}
-              className="w-full h-full object-cover"
-            />
+            <img src={img} alt={`slide-${index}`} className="w-full h-full object-cover" />
           </div>
         ))}
 

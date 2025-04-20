@@ -2,8 +2,34 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      colors: {
+        marielaPink: "#f8cfd4"
+      },
       transformOrigin: {
-        'center': 'center',
+        center: 'center',
+      },
+      keyframes: {
+        glitter: {
+          '0%, 100%': { backgroundPosition: '0% 0%' },
+          '50%': { backgroundPosition: '100% 100%' },
+        },
+        pulse: {
+          '0%, 100%': { transform: 'scale(0.45)' },
+          '90%': { transform: 'scale(0.1)' },
+        },
+      },
+      animation: {
+        glitter: 'glitter 6s linear infinite',
+        pulse: 'pulse 1s linear infinite',
+        'pulse-1': 'pulse 1.1s 300ms linear infinite',
+        'pulse-2': 'pulse 0.8s 600ms linear infinite',
+        'pulse-3': 'pulse 1.3s 900ms linear infinite',
+      },
+      backgroundImage: {
+        glitter: "radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        glitter: '3px 3px',
       },
     },
   },
